@@ -1,4 +1,4 @@
-# zh-cn-default
+# 言简意明 · clarity-zh
 
 为 Codex 提供简体中文默认输出规范，涵盖回复、文档和 Git 提交消息，减少多余的防御性措辞、重复免责与过度限定，保留必要的事实边界及代码、命令和技术标识符原文。
 
@@ -32,23 +32,23 @@
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.agents\skills" | Out-Null
-git clone https://github.com/TobeBestKK/zh-cn-default-skill.git "$env:USERPROFILE\.agents\skills\zh-cn-default"
+git clone https://github.com/TimeseekerKK/clarity-zh.git "$env:USERPROFILE\.agents\skills\clarity-zh"
 ```
 
 **macOS / Linux**
 
 ```bash
 mkdir -p "$HOME/.agents/skills"
-git clone https://github.com/TobeBestKK/zh-cn-default-skill.git "$HOME/.agents/skills/zh-cn-default"
+git clone https://github.com/TimeseekerKK/clarity-zh.git "$HOME/.agents/skills/clarity-zh"
 ```
 
-安装后，技能文件应位于 `~/.agents/skills/zh-cn-default/SKILL.md`。也可以手动创建该目录，只将本仓库的 `SKILL.md` 放入其中。
+安装后，技能文件应位于 `~/.agents/skills/clarity-zh/SKILL.md`。也可以手动创建该目录，只将本仓库的 `SKILL.md` 放入其中。
 
 Codex 会自动检测新增技能；如果没有出现，重启 Codex。目录位置与发现机制见 [OpenAI 技能文档](https://learn.chatgpt.com/docs/build-skills)。
 
 ### 项目级安装
 
-只想在某个项目中使用时，将 `SKILL.md` 放到该项目的 `.agents/skills/zh-cn-default/SKILL.md`。团队可将它纳入版本控制，与项目一起分发。
+只想在某个项目中使用时，将 `SKILL.md` 放到该项目的 `.agents/skills/clarity-zh/SKILL.md`。团队可将它纳入版本控制，与项目一起分发。
 
 同一环境中建议只保留一份同名技能，避免选择时出现重复项。
 
@@ -59,14 +59,14 @@ Codex 会自动检测新增技能；如果没有出现，重启 Codex。目录�
 在 Codex 提示词中写出技能名，并附上实际任务，例如：
 
 ```text
-$zh-cn-default 解释这段报错，并给出排查步骤。
+$clarity-zh 解释这段报错，并给出排查步骤。
 ```
 
 ```text
-$zh-cn-default 为这次修改编写 Git 提交消息。
+$clarity-zh 为这次修改编写 Git 提交消息。
 ```
 
-也可以从客户端的技能选择器中选择 `zh-cn-default`；Codex CLI 和 IDE 扩展支持输入 `$` 选择技能。
+也可以从客户端的技能选择器中选择 `clarity-zh`；Codex CLI 和 IDE 扩展支持输入 `$` 选择技能。
 
 ### 自动选用与持续默认生效
 
@@ -83,13 +83,13 @@ $zh-cn-default 为这次修改编写 Git 提交消息。
 **Windows（PowerShell）**
 
 ```powershell
-git -C "$env:USERPROFILE\.agents\skills\zh-cn-default" pull --ff-only
+git -C "$env:USERPROFILE\.agents\skills\clarity-zh" pull --ff-only
 ```
 
 **macOS / Linux**
 
 ```bash
-git -C "$HOME/.agents/skills/zh-cn-default" pull --ff-only
+git -C "$HOME/.agents/skills/clarity-zh" pull --ff-only
 ```
 
 手动复制安装时，重新下载并替换对应的 `SKILL.md`；项目级安装时更新项目内的文件。更新后若未被识别，重启 Codex。
